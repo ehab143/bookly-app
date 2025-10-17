@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedBooksListView(),
           SizedBox(height: 50),
-          Text('Best Seller', style: Styles.titleMedium),
+          Text('Best Seller', style: Styles.textStyle18),
           BestSellerListViewItem(),
         ],
       ),
@@ -48,10 +48,20 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+          Spacer(),
+          Column(
+            children: [
+              Text('Harry Potter and The Goblet Of Fire'),
+              Text('Harry Potter and The Goblet Of Fire'),
+              Row(
+                children: [
+                  Text('199.99\$'),
+                  SizedBox(width: 110),
 
-          Column(children: [
-      
-              
+                  Icon(Icons.star),
+                  Text('4.8(2025)'),
+                ],
+              ),
             ],
           ),
         ],
