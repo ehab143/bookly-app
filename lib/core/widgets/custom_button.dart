@@ -26,7 +26,6 @@ class CustomButton extends StatelessWidget {
             borderRadius: borderRadius ?? BorderRadiusGeometry.circular(12),
           ),
         ),
-        onPressed: () {},
         child: Text(
           text,
           style: Styles.textStyle18.copyWith(
@@ -35,6 +34,7 @@ class CustomButton extends StatelessWidget {
             fontSize: fontSize,
           ),
         ),
+        onPressed: () {},
       ),
     );
   }
