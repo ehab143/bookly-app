@@ -12,7 +12,6 @@ class BooksDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-
     return Column(
       children: [
         Padding(
@@ -25,7 +24,6 @@ class BooksDetailsSection extends StatelessWidget {
           style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 6),
-
         Opacity(
           opacity: 0.8,
           child: Text(
