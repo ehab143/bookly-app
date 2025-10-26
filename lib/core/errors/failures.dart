@@ -31,13 +31,13 @@ class ServerFailure extends Failure {
       case DioExceptionType.cancel:
         return ServerFailure('Request to  apiServer was canceled');
 
-      // case DioExceptionType.connectionError:
-      //   return ServerFailure('No Internet Connection');
+      case DioExceptionType.connectionError:
+        return ServerFailure('No Internet Connection');
 
       case DioExceptionType.unknown:
-        if (dioError.message!.contains('SocketException')) {
-          return ServerFailure('No Internet Connection');
-        }
+        // if (dioError.message!.contains('SocketException')) {
+        //   return ServerFailure('No Internet Connection');
+        // }
         return ServerFailure('Unexpected error ,please try again');
       default:
         return ServerFailure('Oops there was an error please try again');
