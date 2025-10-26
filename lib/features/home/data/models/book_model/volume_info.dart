@@ -16,6 +16,8 @@ class VolumeInfo extends Equatable {
   final int? pageCount;
   final String? printType;
   final List<String>? categories;
+  final int? averageRating;
+  final int? ratingsCount;
   final String? maturityRating;
   final bool? allowAnonLogging;
   final String? contentVersion;
@@ -37,6 +39,8 @@ class VolumeInfo extends Equatable {
     this.pageCount,
     this.printType,
     this.categories,
+    this.averageRating,
+    this.ratingsCount,
     this.maturityRating,
     this.allowAnonLogging,
     this.contentVersion,
@@ -63,6 +67,9 @@ class VolumeInfo extends Equatable {
     pageCount: json['pageCount'] as int?,
     printType: json['printType'] as String?,
     categories: (json['categories'] as List<dynamic>?)?.cast<String>(),
+    averageRating: json['averageRating'] as int?,
+    ratingsCount: json['ratingsCount'] as int?,
+
     maturityRating: json['maturityRating'] as String?,
     allowAnonLogging: json['allowAnonLogging'] as bool?,
     contentVersion: json['contentVersion'] as String?,
@@ -71,7 +78,7 @@ class VolumeInfo extends Equatable {
         : PanelizationSummary.fromJson(
             json['panelizationSummary'] as Map<String, dynamic>,
           ),
-    imageLinks:ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+    imageLinks: ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
     language: json['language'] as String?,
     previewLink: json['previewLink'] as String?,
     infoLink: json['infoLink'] as String?,
@@ -89,6 +96,8 @@ class VolumeInfo extends Equatable {
     'pageCount': pageCount,
     'printType': printType,
     'categories': categories,
+    'averageRating': averageRating,
+    'ratingsCount': ratingsCount,
     'maturityRating': maturityRating,
     'allowAnonLogging': allowAnonLogging,
     'contentVersion': contentVersion,
@@ -113,6 +122,8 @@ class VolumeInfo extends Equatable {
       pageCount,
       printType,
       categories,
+      averageRating,
+      ratingsCount,
       maturityRating,
       allowAnonLogging,
       contentVersion,
